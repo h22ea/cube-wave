@@ -7,6 +7,7 @@ function setup() {
     let theCube = createCanvas(450, 450, WEBGL);
     magicAngle = atan(1/ sqrt(2));
     maximumDistance = dist(0, 0, 200, 200);
+    return theCube;
 } 
 
 function draw() {
@@ -25,10 +26,7 @@ function draw() {
             translate(x - width / 2, 0, z - height / 2);
             normalMaterial();
             box(w - 2, h, w - 2);
-            //rect(x - width / 2 + w / 2 , 0, w - 2, h);
-            
-            pop();
-        
+            pop(); 
         }
     }
     angle -= 0.15;
